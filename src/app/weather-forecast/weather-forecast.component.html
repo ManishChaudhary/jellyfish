@@ -1,0 +1,11 @@
+<div class="loader-container" *ngIf="loading">
+    <div class="loader loader-pos"></div>
+</div>
+<div class="days-container" *ngIf="!loading">
+    <app-day-weather id="forcastDays[0]" [day]="forcastDays[0]" [dayForecast]="forecastDeatailsArr[1]">
+    </app-day-weather>
+    <app-day-weather id="forcastDays[1]" [day]="forcastDays[1]" [dayForecast]="forecastDeatailsArr[2]">
+    </app-day-weather>
+    <app-day-weather id="forcastDays[2]" [day]="forcastDays[2]" [dayForecast]="forecastDeatailsArr[3]">
+    </app-day-weather>
+</div>

@@ -1,0 +1,13 @@
+<div class="current-weather-header headings">
+    {{currentWeatherDetails?.name | uppercase}}
+</div>
+<div class="current-weather-grid">
+    <div *ngIf="!loading && currentWeatherDetails; else loaderShow">
+        <img class="icon-pos" src="http://openweathermap.org/img/wn/{{currentWeatherDetails?.weather[0]?.icon}}@2x.png"
+            alt="weatherImg" />
+        <div class="temp-reading">{{currentWeatherDetails?.main?.feels_like | number : '1.0-0'}}&deg;</div>
+    </div>
+    <ng-template #loaderShow>
+        <div class="loader loder-pos"></div>
+    </ng-template>
+</div>

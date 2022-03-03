@@ -1,0 +1,6 @@
+<div class="day-weather-grid" *ngIf="dayForecast">
+    <div class="day-weather-grid-heading headings">{{day}}</div>
+    <img class="icon-pos" src="http://openweathermap.org/img/wn/{{dayForecast?.weather[0]?.icon}}@2x.png" />
+    <div class="temp-reading">{{dayForecast?.main.temp_max | number : '1.0-0'}}&deg;</div>
+    <div class="temp-reading">{{dayForecast?.main.temp_min | number : '1.0-0'}}&deg;</div>
+</div>

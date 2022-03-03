@@ -1,0 +1,15 @@
+.days-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+}
+
+.loader-container {
+    display: grid;
+    justify-content: center;
+    .loader-pos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

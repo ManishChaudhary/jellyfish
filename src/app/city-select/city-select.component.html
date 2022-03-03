@@ -1,0 +1,10 @@
+<div class="select-city-grid">
+    <div class="select-city-grid-item">
+        <h2>Select Your City</h2>
+    </div>
+    <div class="select-city-grid-item">
+        <select id="city" name="city" [(ngModel)]="selectedCity" (change)="getCityDetails($event.target.value)">
+            <option *ngFor="let city of citiesList" id={{city.id}} [value]="city.id">{{city.nm}}</option>
+        </select>
+    </div>
+</div>
